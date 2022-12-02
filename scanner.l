@@ -7,7 +7,6 @@
 void yyerror(char *);
 void errorLexico();
 void yyparse();
-#define TOKEN(t) yylval.str = new std::string(yytext, yyleng).
 %}
 
 /*SECCION DE OPCIONES*/
@@ -85,5 +84,5 @@ int main(int argc, char *argv[]) {
 }
 
 void errorLexico(){
-    printf("\nError lexico: Caracter invalido: %s, saliendo...\n" , yytext);
+    printf("\nError lexico: Caracter invalido: %s\n" , yytext);
 }

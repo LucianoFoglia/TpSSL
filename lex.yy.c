@@ -422,14 +422,13 @@ char *yytext;
 void yyerror(char *);
 void errorLexico();
 void yyparse();
-#define TOKEN(t) yylval.str = new std::string(yytext, yyleng).
 /*SECCION DE OPCIONES*/
 /*Para que flex lea solo un fichero de entrada*/
 /*Para obtener el numero de linea*/
 /* TOKENS*/
 /* PALABRAS RESERVADAS */
 /* OPERADORES */
-#line 433 "lex.yy.c"
+#line 432 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -580,9 +579,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 44 "scanner.l"
+#line 43 "scanner.l"
 
-#line 586 "lex.yy.c"
+#line 585 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -675,90 +674,90 @@ do_action:	/* This label is used only to access EOF actions. */
 	{ /* beginning of action switch */
 case 1:
 YY_RULE_SETUP
-#line 45 "scanner.l"
+#line 44 "scanner.l"
 {printf("\nPRAPERTURA (%s) \n", yytext);return PRAPERTURA;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 46 "scanner.l"
+#line 45 "scanner.l"
 {printf("\nPRCIERRE (%s) \n" ,yytext);return PRCIERRE;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 47 "scanner.l"
+#line 46 "scanner.l"
 {printf("\nPRSALIDA (%s) \n",yytext);return PRSALIDA;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 48 "scanner.l"
+#line 47 "scanner.l"
 {printf("\nPRENTRADA (%s) \n",yytext);return PRENTRADA;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 49 "scanner.l"
+#line 48 "scanner.l"
 {printf("\nPUNTOYCOMA (%s) \n",yytext);return PUNTOYCOMA;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 52 "scanner.l"
+#line 51 "scanner.l"
 {printf("\nOPERADORADI (%s) \n" ,yytext);return OPERADORADI;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 53 "scanner.l"
+#line 52 "scanner.l"
 {printf("\nOPERADORSUSTRA (%s) \n" ,yytext);return OPERADORSUSTRA;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 54 "scanner.l"
+#line 53 "scanner.l"
 {printf("\nOPERADORPRODUC (%s) \n" ,yytext);return OPERADORPRODUC;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 55 "scanner.l"
+#line 54 "scanner.l"
 {printf("\nOPEASIGNACION (%s) \n" ,yytext);return OPEASIGNACION;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 56 "scanner.l"
+#line 55 "scanner.l"
 {printf("\nPARAPERT (%s) \n" ,yytext); return PARAPERT;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 57 "scanner.l"
+#line 56 "scanner.l"
 {printf("\nPARCIER (%s) \n" ,yytext); return PARCIER;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 58 "scanner.l"
+#line 57 "scanner.l"
 {printf("\nID (%s) \n",yytext);return ID;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 59 "scanner.l"
+#line 58 "scanner.l"
 {printf("\nDIGITO (%s) \n",yytext); return DIGITO;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 60 "scanner.l"
+#line 59 "scanner.l"
 {return ENTER;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 61 "scanner.l"
+#line 60 "scanner.l"
 
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 62 "scanner.l"
+#line 61 "scanner.l"
 {errorLexico();}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 63 "scanner.l"
+#line 62 "scanner.l"
 ECHO;
 	YY_BREAK
-#line 762 "lex.yy.c"
+#line 761 "lex.yy.c"
 			case YY_STATE_EOF(INITIAL):
 				yyterminate();
 
@@ -1642,7 +1641,7 @@ int main()
 	return 0;
 	}
 #endif
-#line 63 "scanner.l"
+#line 62 "scanner.l"
 
 
 int main(int argc, char *argv[]) {
@@ -1668,5 +1667,5 @@ int main(int argc, char *argv[]) {
 }
 
 void errorLexico(){
-    printf("\nError lexico: Caracter invalido: %s, saliendo...\n" , yytext);
+    printf("\nError lexico: Caracter invalido: %s\n" , yytext);
 }
